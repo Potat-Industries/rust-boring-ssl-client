@@ -4,10 +4,10 @@
   "description": "",
   "main": "index.node",
   "scripts": {
-    "build-macos": "cargo-cp-artifact -nc ./build/macos.node -- cargo build -r --target x86_64-apple-darwin --message-format=json-render-diagnostics",
-    "build-linux": "cargo-cp-artifact -nc ./build/linux.node -- cargo build -r --target x86_64-unknown-linux-gnu --message-format=json-render-diagnostics",
-    "build-win": "cargo-cp-artifact -nc ./build/win.node -- cargo build -r --target x86_64-pc-windows-msvc --message-format=json-render-diagnostics",
-    "build-debug": "cargo-cp-artifact -nc ./build/macos.node -- cargo build --target x86_64-apple-darwin --message-format=json-render-diagnostics",
+    "build-macos": "cargo-cp-artifact -nc ./build/macos.node -- cargo build -r --lib --target x86_64-apple-darwin --message-format=json-render-diagnostics",
+    "build-linux": "cargo-cp-artifact -nc ./build/linux.node -- cargo build -r --lib --target x86_64-unknown-linux-gnu --message-format=json-render-diagnostics",
+    "build-win": "cargo-cp-artifact -nc ./build/win.node -- cargo build -r --lib --target x86_64-pc-windows-msvc --message-format=json-render-diagnostics",
+    "build-debug": "cargo-cp-artifact -nc ./build/macos.node -- cargo build --lib --target x86_64-apple-darwin --message-format=json-render-diagnostics",
     "build-release": "npm run build -- --release",
     "test": "cargo test"
   },
